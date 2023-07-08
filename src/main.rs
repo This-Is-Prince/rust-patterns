@@ -5,6 +5,11 @@ fn main() {
     third();
     fourth();
     fifth();
+    sixth();
+    seventh();
+    eighth();
+    ninth();
+    tenth();
 }
 
 fn first() {
@@ -73,6 +78,105 @@ fn fifth() {
         for j in 1..=col {
             if j <= col + 1 - i {
                 print!("*")
+            }
+        }
+        println!();
+    }
+    println!();
+}
+
+fn sixth() {
+    println!("6. Sixth Pattern\n");
+    let row = 5;
+    let col = 5;
+    for i in 1..=row {
+        for j in 1..=col {
+            if j <= col + 1 - i {
+                print!("{j}");
+            }
+        }
+        println!();
+    }
+    println!();
+}
+
+fn seventh() {
+    println!("7. Seventh Pattern\n");
+    let row = 5;
+    let col = 9;
+    for i in 1..=row {
+        for j in 1..=col {
+            if j >= row + 1 - i && j <= row - 1 + i {
+                print!("*");
+            } else {
+                print!(" ");
+            }
+        }
+        println!();
+    }
+    println!();
+}
+
+fn eighth() {
+    println!("8. Eighth Pattern\n");
+    let row = 5;
+    let col = 9;
+    for i in 1..=row {
+        for j in 1..=col {
+            if j >= i && j <= col + 1 - i {
+                print!("*");
+            } else {
+                print!(" ");
+            }
+        }
+        println!();
+    }
+    println!();
+}
+
+fn ninth() {
+    println!("9. Ninth Pattern\n");
+    let row = 10;
+    let col = 9;
+    for i in 1..=row {
+        for j in 1..=col {
+            if i <= row/2 {
+                if j >= (row/2) + 1 - i && j <= (row/2) - 1 + i {
+                    print!("*");
+                } else {
+                    print!(" ");
+                }
+            } else {
+                if j >= i - (row/2) && j <= col + (row/2) + 1 - i {
+                    print!("*");
+                } else {
+                    print!(" ");
+                }
+            }
+        }
+        println!();
+    }
+    println!();
+}
+
+fn tenth() {
+    println!("10. Tenth Pattern\n");
+    let row = 9;
+    let col = 5;
+    for i in 1..=row {
+        for j in 1..=col {
+            if i <= row/2 {
+                if  j <= i {
+                    print!("*");
+                } else {
+                    print!(" ");
+                }
+            } else {
+                if j <= row + 1 - i {
+                    print!("*");
+                } else {
+                    print!(" ");
+                }
             }
         }
         println!();
