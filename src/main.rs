@@ -10,6 +10,113 @@ fn main() {
     eighth();
     ninth();
     tenth();
+    eleventh();
+    twelfth();
+    thirteen();
+    fourteen();
+    fifteen();
+}
+
+fn fifteen() {
+    println!("15. Fifteen Pattern\n");
+    let row = 5;
+    let col = 5;
+    for i in 1..=row {
+        let mut result = 65;
+        for j in 1..=col {
+            if j <= col + 1 -i {
+                print!("{:}", std::char::from_u32(result).unwrap());
+                result += 1;
+            } else {
+                print!(" ");
+            }
+        }
+        println!();
+    }
+    println!("\n");
+}
+
+fn fourteen() {
+    println!("14. Fourteen Pattern\n");
+    let row = 5;
+    let col = 5;
+    for i in 1..=row {
+        let mut result = 65;
+        for j in 1..=col {
+            if j <= i {
+                print!("{:}", std::char::from_u32(result).unwrap());
+                result += 1;
+            } else {
+                print!(" ");
+            }
+        }
+        println!("");
+    }
+    println!("\n");
+}
+
+fn thirteen() {
+    println!("13. Thirteen Pattern\n");
+    let row = 5;
+    let col = 5;
+    let mut result = 1;
+    for i in 1..=row {
+        for j in 1..=col {
+            if j <= i {
+                print!("{result}");
+                result += 1;
+            } else {
+                print!(" ");
+            }
+        }
+        println!();
+    }
+    println!("\n");
+}
+
+fn twelfth() {
+    println!("12. Twelfth Pattern\n");
+    let row = 4;
+    let col = 8;
+    for i in 1..=row {
+        for j in 1..=col {
+            if j <= i || j >= col + 1 - i {
+                if j <= i {
+                    print!("{j}");
+                } else {
+                    let result = col + 1 - j;
+                    print!("{result}");
+                }
+            } else {
+                print!(" ");
+            }
+        }
+        println!();
+    }
+    println!("\n");
+}
+
+fn eleventh() {
+    println!("11. Eleventh Pattern\n");
+    let row = 5;
+    let col = 5;
+    for i in 1..=row {
+        let mut print = i % 2;
+        for j in 1..=col {
+            if j <= i {
+                print!("{print}");
+                if print == 1 {
+                    print = 0;
+                } else {
+                    print = 1;
+                }
+            } else {
+                print!(" ");
+            }
+        }
+        println!();
+    }
+    println!("\n");
 }
 
 fn first() {
